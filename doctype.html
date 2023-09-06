@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+    <html>
+    
+        <title>how to use command button on a form</title>
+        <h1>how to combine java script with html </h1>
+        <hr/>
+        
+            <script>
+            function takevalues()
+            var fname=document.getElementById("firstname").value;
+            var secname=document.getElementById("secondname").value;
+            document.write("your firstname <br> "+" firstname :" +fname+"<br>");
+            document.write("your secname<br> "+" secondname :" +secname+"<br>");
+            
+            </script>
+    
+        <style> 
+            .fname{
+                font-weight: bold;
+            }
+            .secname{
+                font-size: x-large;
+            }
+        </style>
+    <body>
+        <form onsubmit="takevalues()" >
+        <p>you are wonderfully made</p>
+        <label class="fname" id="firstname" >firstname</label>
+        <input type="text" maxlength="20" required> <br< ><br> <br>
+        <label class="secname" id="secondname">secondname</label>
+        <input type="text" maxlength="15" required > <br> <br>
+        <button type="submit">submit</button> 
+        </form>
+    </body>
+    </html>

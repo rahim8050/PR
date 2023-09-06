@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> 
+</head>
+<body>
+    @auth
+     <p> you are logged in <p>
+        <form action="/logout" method="post">
+            @csrf
+            <button type="submit">log out </button>
+        </form>
+        <div>
+            <h1>create a new post</h1>
+            <form action="/create-post" method="post">
+                @csrf
+                <label for="title">Title</label>
+                <input type="text" name="title" placeholder="post title">
+                <textarea name="body" id="body" cols="30" rows="10" placeholder="body content..."></textarea>
+                <button type="submit">Savepost</button>
+            </form>
+        </div>
+    @else
+    <div>
+        <h2>Register</h2>
+        <form action="/Register" method="post">
+            @csrf
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="name">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="email">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="password">
+            </div>
+            <div>
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div>
+        <h3>Log in</h3>
+        <form action="/login" method="post">
+            @csrf
+            <div>
+                <label for="loginname">Name</label>
+                <input type="text" name="loginname" id="loginname" placeholder="loginName">
+            </div>
+            
+            <div>
+                <label for="loginpassword">Password</label>
+                <input type="Password" id="loginpassword" name="loginpassword" placeholder="password">
+            </div>
+            <div>
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+    @endauth
+    
+</body>
+</html>
