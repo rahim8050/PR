@@ -1,0 +1,52 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-shadow: lightsteelblue;
+    
+    }
+    .nav ul li{
+       display: inline-flex;
+       margin: 10px;
+    
+    }
+    a{
+       text-decoration: none;
+       color: purple;
+    
+    }
+    .home{
+    
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 70px;
+    background:palegreen;
+    }
+    
+    .hed{
+    
+    float: left;
+    
+    }
+    
+    
+    .nav{
+    float: right;
+    
+    
+    }
+    
+    .high{
+       color: goldenrod;
+    }
+    .firearm{
+        padding-top: 90px;
+        padding-bottom: 90px;
+        text-align: center;
+    }
+    nav a:hover{
+        color: blue;
+    }
